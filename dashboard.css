@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: url('bg.jpg') no-repeat center/cover;
+}
+
+/*dashboard*/
+#menu-toggle {
+    display: none;
+}
+
+.toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 35px;
+    height: 30px;
+    background: rgba(221, 40, 40, 0.977);
+    cursor: pointer;
+    border-radius: 4px;
+    z-index: 1001;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.toggle span {
+    position: absolute;
+    width: 22px;
+    height: 3px;
+    background: #fff;
+    border-radius: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.4s ease;
+}
+
+.toggle .top_line {
+    top: 7px;
+}
+
+.toggle .middle_line {
+    top: 13px;
+}
+
+.toggle .bottom_line {
+    top: 19px;
+}
+
+#menu-toggle:checked + .toggle .top_line {
+    transform: translateX(-50%) rotate(45deg);
+    top: 13px;
+}
+
+#menu-toggle:checked + .toggle .middle_line {
+    opacity: 0;
+}
+
+#menu-toggle:checked + .toggle .bottom_line {
+    transform: translateX(-50%) rotate(-45deg);
+    top: 13px;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 180px;
+    z-index: 1000;
+}
+
+.slide {
+    height: 100%;
+    width: 135%;
+    background: linear-gradient(rgb(240, 238, 238), rgba(199, 190, 190, 0.653));
+    transform: translateX(-100%);
+    transition: 0.5s ease;
+    padding-top: 60px;
+}
+
+#menu-toggle:checked ~ nav .slide {
+    transform: translateX(0);
+}
+
+.slide h1 {
+    color: #ad2c2c;
+    font-weight: 800;
+    text-align: center;
+    padding: 10px 10px;
+}
+
+.slide ul {
+    margin-top: 20px;
+}
+
+.slide ul li {
+    list-style: none;
+}
+
+.slide ul li a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 20px;
+    color: #080707;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.slide ul li a:hover {
+    background: #96cfe9;
+    color: #000000;
+}
+
+.slide ul li a i {
+    width: 20px;
+    text-align: center;
+}

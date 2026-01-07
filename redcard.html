@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="redcard.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="redcard.js" defer></script>
+</head>
+<body>
+    <input type="checkbox" id="menu-toggle">
+
+    <label for="menu-toggle" class="toggle">
+        <span class="top_line"></span>
+        <span class="middle_line"></span>
+        <span class="bottom_line"></span>
+    </label>
+
+    <nav>
+        <div class="slide">
+            <h1>Dashboard</h1>
+            <ul>
+                <li><a href="website.html"><i class="fa-regular fa-house"></i>Home</a></li>
+                <li><a href="Profile.html"><i class="fa-regular fa-user"></i>Profile</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="card" 
+        data-img="profile.jpg" 
+        data-title="Dear Kupal" 
+        data-text="Kupal kaba boss?">
+            <img src="profile.jpg">
+        </div>
+
+        <div class="card" 
+        data-img="manggi.jpg" 
+        data-video="papadutdut.mp4" 
+        data-title="Manggi card" 
+        data-text="Postora ko manggi ko">
+            <img src="manggi.jpg">
+        </div>
+
+        <div class="card" 
+        data-img="tombits.jpg" 
+        data-video="paps.mp4" 
+        data-title="Tombits Card" 
+        data-text="Loha ka muna tombits">
+            <img src="tombits.jpg">
+        </div>
+
+        <div class="card" 
+        data-img="kian.jpg" 
+        data-video="papidutdut.mp4" 
+        data-title="Kian Card" 
+        data-text="Malas na kumag">
+            <img src="kian.jpg">
+        </div>
+
+        <div class="card" 
+        data-img="coco.jpg" 
+        data-title="Letter 5" 
+        data-text="Back to coco">
+            <img src="coco.jpg">
+        </div>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal-card">
+            <div class="modal-inner" id="modalInner">            
+                <div class="modal-front">
+                    <img id="modalImg" src="">
+                </div>
+                <div class="modal-back">
+                    <h3 id="modalTitle"></h3>
+                    
+                    <div class="modal-content-middle">
+                        <div id="videoContainer" style="display: none; width: 100%;">
+                            <video id="modalVideo" controls width="100%" style="border-radius: 10px;">
+                                <source src="" type="video/mp4">
+                            </video>
+                        </div>
+                        <p id="modalText"></p>
+                    </div>
+
+                    <button id="closeBtn">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

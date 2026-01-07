@@ -1,0 +1,87 @@
+.container {
+    max-width: 900px;
+    min-height: auto;
+    padding: 40px;
+    margin: 60px auto;
+    background: linear-gradient(rgb(240, 236, 236), rgba(181, 160, 160, 0.653));
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container h1 {
+    text-align: left;
+    font-size: 40px;
+    color: #030303eb;
+    text-shadow: 4px 4px 6px #aaaaaa;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    animation: fadeInUp 1.0s ease-out forwards;
+}
+
+.container h2 {
+    text-align: left;
+    font-size: 25px;
+    color: #030303eb;
+    text-shadow: 4px 4px 6px #aaaaaa;
+    margin-top:  -5px;
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+.container p {
+    font-size: 18px;
+    color: #030303eb;
+    margin: 6px 0;
+    margin-top: -20px;
+    text-align: left;
+    animation: fadeIn 2.0s ease-out forwards;
+    
+}
+
+.title {
+    margin-top: -150px;
+}
+
+.profile-pic{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin-top: -20px;
+    margin-bottom: -260px;
+    margin-left: 550px;
+    margin-right: 50px;
+    animation: fadeInUp 1.2s ease-out forwards;
+}
+
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 25px;
+    }
+
+    .profile-pic {
+        align-self: center;
+    }
+}

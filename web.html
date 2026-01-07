@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Website</title>
+    <link rel="stylesheet" type="text/css" href="web.css">
+</head>
+<body>
+    <div class="container">
+        <div class="namecontainer">
+            <h2>Please enter your name:</h2>
+        <div class="input-box">
+            <input type="text" class="input" id="username">
+            <label for="username">Enter your name</label>
+        </div>
+    <button id="submitBtn">Submit</button>
+    </div>
+    </div>
+    <script>
+        const input = document.getElementById('username');
+        const label = document.querySelector('label[for="username"]');
+        const submitBtn = document.getElementById('submitBtn');
+
+        input.addEventListener('input', function() {
+            if (this.value) {
+                label.classList.add('filled');
+            } else {
+                label.classList.remove('filled');
+            }
+        });
+
+        submitBtn.addEventListener('click', function() {
+            if (input.value.trim() === '') {
+                alert('please fill up the name');
+            } else {
+                localStorage.setItem('username', input.value.trim());
+                window.location.href = 'website.html';
+            }
+        });
+    </script>
+        </body>
+</html>
